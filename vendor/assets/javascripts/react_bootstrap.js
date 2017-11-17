@@ -2267,7 +2267,7 @@
         var propTypes = Component.propTypes || (Component.propTypes = {});
         var defaultProps = Component.defaultProps || (Component.defaultProps = {});
 
-        propTypes.bsClass = _react.PropTypes.string;
+        propTypes.bsClass = PropTypes.string;
         defaultProps.bsClass = defaultClass;
 
         return Component;
@@ -2288,7 +2288,7 @@
           }
         });
 
-        var propType = _react.PropTypes.oneOf(existing);
+        var propType = PropTypes.oneOf(existing);
 
         // expose the values on the propType function for documentation
         Component.STYLES = propType._values = existing;
@@ -2330,7 +2330,7 @@
           values.push(size);
         });
 
-        var propType = _react.PropTypes.oneOf(values);
+        var propType = PropTypes.oneOf(values);
         propType._values = values;
 
         // expose the values on the propType function for documentation
@@ -2862,8 +2862,8 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        onDismiss: _react2['default'].PropTypes.func,
-        closeLabel: _react2['default'].PropTypes.string
+        onDismiss: PropTypes.func,
+        closeLabel: PropTypes.string
       };
 
       var defaultProps = {
@@ -3018,7 +3018,7 @@
       // TODO: `pullRight` doesn't belong here. There's no special handling here.
 
       var propTypes = {
-        pullRight: _react2['default'].PropTypes.bool
+        pullRight: PropTypes.bool
       };
 
       var defaultProps = {
@@ -3213,19 +3213,19 @@
         /**
          * If set to true, renders `span` instead of `a`
          */
-        active: _react2['default'].PropTypes.bool,
+        active: PropTypes.bool,
         /**
          * `href` attribute for the inner `a` element
          */
-        href: _react2['default'].PropTypes.string,
+        href: PropTypes.string,
         /**
          * `title` attribute for the inner `a` element
          */
-        title: _react2['default'].PropTypes.node,
+        title: PropTypes.node,
         /**
          * `target` attribute for the inner `a` element
          */
-        target: _react2['default'].PropTypes.string
+        target: PropTypes.string
       };
 
       var defaultProps = {
@@ -3308,11 +3308,11 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        href: _react2['default'].PropTypes.string,
-        onClick: _react2['default'].PropTypes.func,
-        disabled: _react2['default'].PropTypes.bool,
-        role: _react2['default'].PropTypes.string,
-        tabIndex: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        href: PropTypes.string,
+        onClick: PropTypes.func,
+        disabled: PropTypes.bool,
+        role: PropTypes.string,
+        tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /**
          * this is sort of silly but needed for Button
          */
@@ -3538,17 +3538,17 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        active: _react2['default'].PropTypes.bool,
-        disabled: _react2['default'].PropTypes.bool,
-        block: _react2['default'].PropTypes.bool,
-        onClick: _react2['default'].PropTypes.func,
+        active: PropTypes.bool,
+        disabled: PropTypes.bool,
+        block: PropTypes.bool,
+        onClick: PropTypes.func,
         componentClass: _elementType2['default'],
-        href: _react2['default'].PropTypes.string,
+        href: PropTypes.string,
         /**
          * Defines HTML button type attribute
          * @defaultValue 'button'
          */
-        type: _react2['default'].PropTypes.oneOf(['button', 'reset', 'submit'])
+        type: PropTypes.oneOf(['button', 'reset', 'submit'])
       };
 
       var defaultProps = {
@@ -3668,14 +3668,14 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        vertical: _react2['default'].PropTypes.bool,
-        justified: _react2['default'].PropTypes.bool,
+        vertical: PropTypes.bool,
+        justified: PropTypes.bool,
 
         /**
          * Display block buttons; only useful when used with the "vertical" prop.
          * @type {bool}
          */
-        block: (0, _all2['default'])(_react2['default'].PropTypes.bool, function (_ref) {
+        block: (0, _all2['default'])(PropTypes.bool, function (_ref) {
           var block = _ref.block;
           var vertical = _ref.vertical;
           return block && !vertical ? new Error('`block` requires `vertical` to be set to have any effect') : null;
@@ -3914,12 +3914,12 @@
       // TODO: Use uncontrollable.
 
       var propTypes = {
-        slide: _react2['default'].PropTypes.bool,
-        indicators: _react2['default'].PropTypes.bool,
-        interval: _react2['default'].PropTypes.number,
-        controls: _react2['default'].PropTypes.bool,
-        pauseOnHover: _react2['default'].PropTypes.bool,
-        wrap: _react2['default'].PropTypes.bool,
+        slide: PropTypes.bool,
+        indicators: PropTypes.bool,
+        interval: PropTypes.number,
+        controls: PropTypes.bool,
+        pauseOnHover: PropTypes.bool,
+        wrap: PropTypes.bool,
         /**
          * Callback fired when the active item changes.
          *
@@ -3931,13 +3931,13 @@
          * be a persisted event object with `direction` set to the direction of the
          * transition.
          */
-        onSelect: _react2['default'].PropTypes.func,
-        onSlideEnd: _react2['default'].PropTypes.func,
-        activeIndex: _react2['default'].PropTypes.number,
-        defaultActiveIndex: _react2['default'].PropTypes.number,
-        direction: _react2['default'].PropTypes.oneOf(['prev', 'next']),
-        prevIcon: _react2['default'].PropTypes.node,
-        nextIcon: _react2['default'].PropTypes.node
+        onSelect: PropTypes.func,
+        onSlideEnd: PropTypes.func,
+        activeIndex: PropTypes.number,
+        defaultActiveIndex: PropTypes.number,
+        direction: PropTypes.oneOf(['prev', 'next']),
+        prevIcon: PropTypes.node,
+        nextIcon: PropTypes.node
       };
 
       var defaultProps = {
@@ -4403,12 +4403,12 @@
       // not wait until transition end to trigger continuing animations.
 
       var propTypes = {
-        direction: _react2['default'].PropTypes.oneOf(['prev', 'next']),
-        onAnimateOutEnd: _react2['default'].PropTypes.func,
-        active: _react2['default'].PropTypes.bool,
-        animateIn: _react2['default'].PropTypes.bool,
-        animateOut: _react2['default'].PropTypes.bool,
-        index: _react2['default'].PropTypes.number
+        direction: PropTypes.oneOf(['prev', 'next']),
+        onAnimateOutEnd: PropTypes.func,
+        active: PropTypes.bool,
+        animateIn: PropTypes.bool,
+        animateOut: PropTypes.bool,
+        index: PropTypes.number
       };
 
       var defaultProps = {
@@ -4689,7 +4689,7 @@
         /**
          * An icon name. See e.g. http://getbootstrap.com/components/#glyphicons
          */
-        glyph: _react2['default'].PropTypes.string.isRequired
+        glyph: PropTypes.string.isRequired
       };
 
       var Glyphicon = function (_React$Component) {
@@ -4774,12 +4774,12 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        inline: _react2['default'].PropTypes.bool,
-        disabled: _react2['default'].PropTypes.bool,
+        inline: PropTypes.bool,
+        disabled: PropTypes.bool,
         /**
          * Only valid if `inline` is not set.
          */
-        validationState: _react2['default'].PropTypes.oneOf(['success', 'warning', 'error']),
+        validationState: PropTypes.oneOf(['success', 'warning', 'error']),
         /**
          * Attaches a ref to the `<input>` element. Only functions can be used here.
          *
@@ -4787,7 +4787,7 @@
          * <Checkbox inputRef={ref => { this.input = ref; }} />
          * ```
          */
-        inputRef: _react2['default'].PropTypes.func
+        inputRef: PropTypes.func
       };
 
       var defaultProps = {
@@ -4997,7 +4997,7 @@
          *
          * adds class `visible-xs-block`
          */
-        visibleXsBlock: _react2['default'].PropTypes.bool,
+        visibleXsBlock: PropTypes.bool,
         /**
          * Apply clearfix
          *
@@ -5005,7 +5005,7 @@
          *
          * adds class `visible-sm-block`
          */
-        visibleSmBlock: _react2['default'].PropTypes.bool,
+        visibleSmBlock: PropTypes.bool,
         /**
          * Apply clearfix
          *
@@ -5013,7 +5013,7 @@
          *
          * adds class `visible-md-block`
          */
-        visibleMdBlock: _react2['default'].PropTypes.bool,
+        visibleMdBlock: PropTypes.bool,
         /**
          * Apply clearfix
          *
@@ -5021,7 +5021,7 @@
          *
          * adds class `visible-lg-block`
          */
-        visibleLgBlock: _react2['default'].PropTypes.bool
+        visibleLgBlock: PropTypes.bool
       };
 
       var defaultProps = {
@@ -5134,8 +5134,8 @@
         /**
          * Uses `controlId` from `<FormGroup>` if not explicitly specified.
          */
-        htmlFor: _react2['default'].PropTypes.string,
-        srOnly: _react2['default'].PropTypes.bool
+        htmlFor: PropTypes.string,
+        srOnly: PropTypes.bool
       };
 
       var defaultProps = {
@@ -5143,7 +5143,7 @@
       };
 
       var contextTypes = {
-        $bs_formGroup: _react2['default'].PropTypes.object
+        $bs_formGroup: PropTypes.object
       };
 
       var ControlLabel = function (_React$Component) {
@@ -5249,7 +5249,7 @@
          *
          * class-prefix `col-xs-`
          */
-        xs: _react2['default'].PropTypes.number,
+        xs: PropTypes.number,
         /**
          * The number of columns you wish to span
          *
@@ -5257,7 +5257,7 @@
          *
          * class-prefix `col-sm-`
          */
-        sm: _react2['default'].PropTypes.number,
+        sm: PropTypes.number,
         /**
          * The number of columns you wish to span
          *
@@ -5265,7 +5265,7 @@
          *
          * class-prefix `col-md-`
          */
-        md: _react2['default'].PropTypes.number,
+        md: PropTypes.number,
         /**
          * The number of columns you wish to span
          *
@@ -5273,7 +5273,7 @@
          *
          * class-prefix `col-lg-`
          */
-        lg: _react2['default'].PropTypes.number,
+        lg: PropTypes.number,
         /**
          * Hide column
          *
@@ -5281,7 +5281,7 @@
          *
          * adds class `hidden-xs`
          */
-        xsHidden: _react2['default'].PropTypes.bool,
+        xsHidden: PropTypes.bool,
         /**
          * Hide column
          *
@@ -5289,7 +5289,7 @@
          *
          * adds class `hidden-sm`
          */
-        smHidden: _react2['default'].PropTypes.bool,
+        smHidden: PropTypes.bool,
         /**
          * Hide column
          *
@@ -5297,7 +5297,7 @@
          *
          * adds class `hidden-md`
          */
-        mdHidden: _react2['default'].PropTypes.bool,
+        mdHidden: PropTypes.bool,
         /**
          * Hide column
          *
@@ -5305,7 +5305,7 @@
          *
          * adds class `hidden-lg`
          */
-        lgHidden: _react2['default'].PropTypes.bool,
+        lgHidden: PropTypes.bool,
         /**
          * Move columns to the right
          *
@@ -5313,7 +5313,7 @@
          *
          * class-prefix `col-xs-offset-`
          */
-        xsOffset: _react2['default'].PropTypes.number,
+        xsOffset: PropTypes.number,
         /**
          * Move columns to the right
          *
@@ -5321,7 +5321,7 @@
          *
          * class-prefix `col-sm-offset-`
          */
-        smOffset: _react2['default'].PropTypes.number,
+        smOffset: PropTypes.number,
         /**
          * Move columns to the right
          *
@@ -5329,7 +5329,7 @@
          *
          * class-prefix `col-md-offset-`
          */
-        mdOffset: _react2['default'].PropTypes.number,
+        mdOffset: PropTypes.number,
         /**
          * Move columns to the right
          *
@@ -5337,7 +5337,7 @@
          *
          * class-prefix `col-lg-offset-`
          */
-        lgOffset: _react2['default'].PropTypes.number,
+        lgOffset: PropTypes.number,
         /**
          * Change the order of grid columns to the right
          *
@@ -5345,7 +5345,7 @@
          *
          * class-prefix `col-xs-push-`
          */
-        xsPush: _react2['default'].PropTypes.number,
+        xsPush: PropTypes.number,
         /**
          * Change the order of grid columns to the right
          *
@@ -5353,7 +5353,7 @@
          *
          * class-prefix `col-sm-push-`
          */
-        smPush: _react2['default'].PropTypes.number,
+        smPush: PropTypes.number,
         /**
          * Change the order of grid columns to the right
          *
@@ -5361,7 +5361,7 @@
          *
          * class-prefix `col-md-push-`
          */
-        mdPush: _react2['default'].PropTypes.number,
+        mdPush: PropTypes.number,
         /**
          * Change the order of grid columns to the right
          *
@@ -5369,7 +5369,7 @@
          *
          * class-prefix `col-lg-push-`
          */
-        lgPush: _react2['default'].PropTypes.number,
+        lgPush: PropTypes.number,
         /**
          * Change the order of grid columns to the left
          *
@@ -5377,7 +5377,7 @@
          *
          * class-prefix `col-xs-pull-`
          */
-        xsPull: _react2['default'].PropTypes.number,
+        xsPull: PropTypes.number,
         /**
          * Change the order of grid columns to the left
          *
@@ -5385,7 +5385,7 @@
          *
          * class-prefix `col-sm-pull-`
          */
-        smPull: _react2['default'].PropTypes.number,
+        smPull: PropTypes.number,
         /**
          * Change the order of grid columns to the left
          *
@@ -5393,7 +5393,7 @@
          *
          * class-prefix `col-md-pull-`
          */
-        mdPull: _react2['default'].PropTypes.number,
+        mdPull: PropTypes.number,
         /**
          * Change the order of grid columns to the left
          *
@@ -5401,7 +5401,7 @@
          *
          * class-prefix `col-lg-pull-`
          */
-        lgPull: _react2['default'].PropTypes.number
+        lgPull: PropTypes.number
       };
 
       var defaultProps = {
@@ -5544,50 +5544,50 @@
         /**
          * Show the component; triggers the expand or collapse animation
          */
-        'in': _react2['default'].PropTypes.bool,
+        'in': PropTypes.bool,
 
         /**
          * Unmount the component (remove it from the DOM) when it is collapsed
          */
-        unmountOnExit: _react2['default'].PropTypes.bool,
+        unmountOnExit: PropTypes.bool,
 
         /**
          * Run the expand animation when the component mounts, if it is initially
          * shown
          */
-        transitionAppear: _react2['default'].PropTypes.bool,
+        transitionAppear: PropTypes.bool,
 
         /**
          * Duration of the collapse animation in milliseconds, to ensure that
          * finishing callbacks are fired even if the original browser transition end
          * events are canceled
          */
-        timeout: _react2['default'].PropTypes.number,
+        timeout: PropTypes.number,
 
         /**
          * Callback fired before the component expands
          */
-        onEnter: _react2['default'].PropTypes.func,
+        onEnter: PropTypes.func,
         /**
          * Callback fired after the component starts to expand
          */
-        onEntering: _react2['default'].PropTypes.func,
+        onEntering: PropTypes.func,
         /**
          * Callback fired after the component has expanded
          */
-        onEntered: _react2['default'].PropTypes.func,
+        onEntered: PropTypes.func,
         /**
          * Callback fired before the component collapses
          */
-        onExit: _react2['default'].PropTypes.func,
+        onExit: PropTypes.func,
         /**
          * Callback fired after the component starts to collapse
          */
-        onExiting: _react2['default'].PropTypes.func,
+        onExiting: PropTypes.func,
         /**
          * Callback fired after the component has collapsed
          */
-        onExited: _react2['default'].PropTypes.func,
+        onExited: PropTypes.func,
 
         /**
          * The dimension used when collapsing, or a function that returns the
@@ -5596,7 +5596,7 @@
          * _Note: Bootstrap only partially supports 'width'!
          * You will need to supply your own CSS animation for the `.width` CSS class._
          */
-        dimension: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.oneOf(['height', 'width']), _react2['default'].PropTypes.func]),
+        dimension: PropTypes.oneOfType([PropTypes.oneOf(['height', 'width']), PropTypes.func]),
 
         /**
          * Function that returns the height or width of the animating DOM node
@@ -5605,12 +5605,12 @@
          * should animate in its specified dimension. Called with the current
          * dimension prop value and the DOM node.
          */
-        getDimensionValue: _react2['default'].PropTypes.func,
+        getDimensionValue: PropTypes.func,
 
         /**
          * ARIA role of collapsible element
          */
-        role: _react2['default'].PropTypes.string
+        role: PropTypes.string
       };
 
       var defaultProps = {
@@ -6483,14 +6483,14 @@
         /**
          * The menu will open above the dropdown button, instead of below it.
          */
-        dropup: _react2['default'].PropTypes.bool,
+        dropup: PropTypes.bool,
 
         /**
          * An html id attribute, necessary for assistive technologies, such as screen readers.
          * @type {string|number}
          * @required
          */
-        id: (0, _isRequiredForA11y2['default'])(_react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number])),
+        id: (0, _isRequiredForA11y2['default'])(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
 
         componentClass: _elementType2['default'],
 
@@ -6503,24 +6503,24 @@
         /**
          * Whether or not component is disabled.
          */
-        disabled: _react2['default'].PropTypes.bool,
+        disabled: PropTypes.bool,
 
         /**
          * Align the menu to the right side of the Dropdown toggle
          */
-        pullRight: _react2['default'].PropTypes.bool,
+        pullRight: PropTypes.bool,
 
         /**
          * Whether or not the Dropdown is visible.
          *
          * @controllable onToggle
          */
-        open: _react2['default'].PropTypes.bool,
+        open: PropTypes.bool,
 
         /**
          * A callback fired when the Dropdown closes.
          */
-        onClose: _react2['default'].PropTypes.func,
+        onClose: PropTypes.func,
 
         /**
          * A callback fired when the Dropdown wishes to change visibility. Called with the requested
@@ -6531,7 +6531,7 @@
          * ```
          * @controllable open
          */
-        onToggle: _react2['default'].PropTypes.func,
+        onToggle: PropTypes.func,
 
         /**
          * A callback fired when a menu item is selected.
@@ -6540,13 +6540,13 @@
          * (eventKey: any, event: Object) => any
          * ```
          */
-        onSelect: _react2['default'].PropTypes.func,
+        onSelect: PropTypes.func,
 
         /**
          * If `'menuitem'`, causes the dropdown to behave like a menu item rather than
          * a menu button.
          */
-        role: _react2['default'].PropTypes.string
+        role: PropTypes.string
       };
 
       var defaultProps = {
@@ -7433,11 +7433,11 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        open: _react2['default'].PropTypes.bool,
-        pullRight: _react2['default'].PropTypes.bool,
-        onClose: _react2['default'].PropTypes.func,
-        labelledBy: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number]),
-        onSelect: _react2['default'].PropTypes.func
+        open: PropTypes.bool,
+        pullRight: PropTypes.bool,
+        onClose: PropTypes.func,
+        labelledBy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        onSelect: PropTypes.func
       };
 
       var defaultProps = {
@@ -8130,10 +8130,10 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        noCaret: _react2['default'].PropTypes.bool,
-        open: _react2['default'].PropTypes.bool,
-        title: _react2['default'].PropTypes.string,
-        useAnchor: _react2['default'].PropTypes.bool
+        noCaret: PropTypes.bool,
+        open: PropTypes.bool,
+        title: PropTypes.string,
+        useAnchor: PropTypes.bool
       };
 
       var defaultProps = {
@@ -8315,16 +8315,16 @@
       var propTypes = (0, _extends3['default'])({}, _Dropdown2['default'].propTypes, {
 
         // Toggle props.
-        bsStyle: _react2['default'].PropTypes.string,
-        bsSize: _react2['default'].PropTypes.string,
-        title: _react2['default'].PropTypes.node.isRequired,
-        noCaret: _react2['default'].PropTypes.bool,
+        bsStyle: PropTypes.string,
+        bsSize: PropTypes.string,
+        title: PropTypes.node.isRequired,
+        noCaret: PropTypes.bool,
 
         // Override generated docs from <Dropdown>.
         /**
          * @private
          */
-        children: _react2['default'].PropTypes.node
+        children: PropTypes.node
       });
 
       var DropdownButton = function (_React$Component) {
@@ -8458,50 +8458,50 @@
         /**
          * Show the component; triggers the fade in or fade out animation
          */
-        'in': _react2['default'].PropTypes.bool,
+        'in': PropTypes.bool,
 
         /**
          * Unmount the component (remove it from the DOM) when it is faded out
          */
-        unmountOnExit: _react2['default'].PropTypes.bool,
+        unmountOnExit: PropTypes.bool,
 
         /**
          * Run the fade in animation when the component mounts, if it is initially
          * shown
          */
-        transitionAppear: _react2['default'].PropTypes.bool,
+        transitionAppear: PropTypes.bool,
 
         /**
          * Duration of the fade animation in milliseconds, to ensure that finishing
          * callbacks are fired even if the original browser transition end events are
          * canceled
          */
-        timeout: _react2['default'].PropTypes.number,
+        timeout: PropTypes.number,
 
         /**
          * Callback fired before the component fades in
          */
-        onEnter: _react2['default'].PropTypes.func,
+        onEnter: PropTypes.func,
         /**
          * Callback fired after the component starts to fade in
          */
-        onEntering: _react2['default'].PropTypes.func,
+        onEntering: PropTypes.func,
         /**
          * Callback fired after the has component faded in
          */
-        onEntered: _react2['default'].PropTypes.func,
+        onEntered: PropTypes.func,
         /**
          * Callback fired before the component fades out
          */
-        onExit: _react2['default'].PropTypes.func,
+        onExit: PropTypes.func,
         /**
          * Callback fired after the component starts to fade out
          */
-        onExiting: _react2['default'].PropTypes.func,
+        onExiting: PropTypes.func,
         /**
          * Callback fired after the component has faded out
          */
-        onExited: _react2['default'].PropTypes.func
+        onExited: PropTypes.func
       };
 
       var defaultProps = {
@@ -8581,8 +8581,8 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        horizontal: _react2['default'].PropTypes.bool,
-        inline: _react2['default'].PropTypes.bool,
+        horizontal: PropTypes.bool,
+        inline: PropTypes.bool,
         componentClass: _elementType2['default']
       };
 
@@ -8697,11 +8697,11 @@
         /**
          * Only relevant if `componentClass` is `'input'`.
          */
-        type: _react2['default'].PropTypes.string,
+        type: PropTypes.string,
         /**
          * Uses `controlId` from `<FormGroup>` if not explicitly specified.
          */
-        id: _react2['default'].PropTypes.string
+        id: PropTypes.string
       };
 
       var defaultProps = {
@@ -8709,7 +8709,7 @@
       };
 
       var contextTypes = {
-        $bs_formGroup: _react2['default'].PropTypes.object
+        $bs_formGroup: PropTypes.object
       };
 
       var FormControl = function (_React$Component) {
@@ -8815,7 +8815,7 @@
       };
 
       var contextTypes = {
-        $bs_formGroup: _react2['default'].PropTypes.object
+        $bs_formGroup: PropTypes.object
       };
 
       var FormControlFeedback = function (_React$Component) {
@@ -9022,12 +9022,12 @@
         /**
          * Sets `id` on `<FormControl>` and `htmlFor` on `<FormGroup.Label>`.
          */
-        controlId: _react2['default'].PropTypes.string,
-        validationState: _react2['default'].PropTypes.oneOf(['success', 'warning', 'error'])
+        controlId: PropTypes.string,
+        validationState: PropTypes.oneOf(['success', 'warning', 'error'])
       };
 
       var childContextTypes = {
-        $bs_formGroup: _react2['default'].PropTypes.object.isRequired
+        $bs_formGroup: PropTypes.object.isRequired
       };
 
       var FormGroup = function (_React$Component) {
@@ -9148,7 +9148,7 @@
          *
          * Adds `container-fluid` class.
          */
-        fluid: _react2['default'].PropTypes.bool,
+        fluid: PropTypes.bool,
         /**
          * You can use a custom element for this component
          */
@@ -9313,22 +9313,22 @@
         /**
          * Sets image as responsive image
          */
-        responsive: _react2['default'].PropTypes.bool,
+        responsive: PropTypes.bool,
 
         /**
          * Sets image shape as rounded
          */
-        rounded: _react2['default'].PropTypes.bool,
+        rounded: PropTypes.bool,
 
         /**
          * Sets image shape as circle
          */
-        circle: _react2['default'].PropTypes.bool,
+        circle: PropTypes.bool,
 
         /**
          * Sets image shape as thumbnail
          */
-        thumbnail: _react2['default'].PropTypes.bool
+        thumbnail: PropTypes.bool
       };
 
       var defaultProps = {
@@ -9970,13 +9970,13 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        active: _react2['default'].PropTypes.any,
-        disabled: _react2['default'].PropTypes.any,
-        header: _react2['default'].PropTypes.node,
-        listItem: _react2['default'].PropTypes.bool,
-        onClick: _react2['default'].PropTypes.func,
-        href: _react2['default'].PropTypes.string,
-        type: _react2['default'].PropTypes.string
+        active: PropTypes.any,
+        disabled: PropTypes.any,
+        header: PropTypes.node,
+        listItem: PropTypes.bool,
+        onClick: PropTypes.func,
+        href: PropTypes.string,
+        type: PropTypes.string
       };
 
       var defaultProps = {
@@ -10414,7 +10414,7 @@
         /**
          * Align the media to the top, middle, or bottom of the media object.
          */
-        align: _react2['default'].PropTypes.oneOf(['top', 'middle', 'bottom'])
+        align: PropTypes.oneOf(['top', 'middle', 'bottom'])
       };
 
       var MediaLeft = function (_React$Component) {
@@ -10649,7 +10649,7 @@
         /**
          * Align the media to the top, middle, or bottom of the media object.
          */
-        align: _react2['default'].PropTypes.oneOf(['top', 'middle', 'bottom'])
+        align: PropTypes.oneOf(['top', 'middle', 'bottom'])
       };
 
       var MediaRight = function (_React$Component) {
@@ -10748,18 +10748,18 @@
         /**
          * Highlight the menu item as active.
          */
-        active: _react2['default'].PropTypes.bool,
+        active: PropTypes.bool,
 
         /**
          * Disable the menu item, making it unselectable.
          */
-        disabled: _react2['default'].PropTypes.bool,
+        disabled: PropTypes.bool,
 
         /**
          * Styles the menu item as a horizontal rule, providing visual separation between
          * groups of menu items.
          */
-        divider: (0, _all2['default'])(_react2['default'].PropTypes.bool, function (_ref) {
+        divider: (0, _all2['default'])(PropTypes.bool, function (_ref) {
           var divider = _ref.divider;
           var children = _ref.children;
           return divider && children ? new Error('Children will not be rendered for dividers') : null;
@@ -10768,22 +10768,22 @@
         /**
          * Value passed to the `onSelect` handler, useful for identifying the selected menu item.
          */
-        eventKey: _react2['default'].PropTypes.any,
+        eventKey: PropTypes.any,
 
         /**
          * Styles the menu item as a header label, useful for describing a group of menu items.
          */
-        header: _react2['default'].PropTypes.bool,
+        header: PropTypes.bool,
 
         /**
          * HTML `href` attribute corresponding to `a.href`.
          */
-        href: _react2['default'].PropTypes.string,
+        href: PropTypes.string,
 
         /**
          * Callback fired when the menu item is clicked.
          */
-        onClick: _react2['default'].PropTypes.func,
+        onClick: PropTypes.func,
 
         /**
          * Callback fired when the menu item is selected.
@@ -10792,7 +10792,7 @@
          * (eventKey: any, event: Object) => any
          * ```
          */
-        onSelect: _react2['default'].PropTypes.func
+        onSelect: PropTypes.func
       };
 
       var defaultProps = {
@@ -11006,17 +11006,17 @@
          * Include a backdrop component. Specify 'static' for a backdrop that doesn't
          * trigger an "onHide" when clicked.
          */
-        backdrop: _react2['default'].PropTypes.oneOf(['static', true, false]),
+        backdrop: PropTypes.oneOf(['static', true, false]),
 
         /**
          * Close the modal when escape key is pressed
          */
-        keyboard: _react2['default'].PropTypes.bool,
+        keyboard: PropTypes.bool,
 
         /**
          * Open and close the Modal with a slide and fade animation.
          */
-        animation: _react2['default'].PropTypes.bool,
+        animation: PropTypes.bool,
 
         /**
          * A Component type that provides the modal content Markup. This is a useful
@@ -11031,55 +11031,55 @@
          * Generally this should never be set to false as it makes the Modal less
          * accessible to assistive technologies, like screen-readers.
          */
-        autoFocus: _react2['default'].PropTypes.bool,
+        autoFocus: PropTypes.bool,
 
         /**
          * When `true` The modal will prevent focus from leaving the Modal while
          * open. Consider leaving the default value here, as it is necessary to make
          * the Modal work well with assistive technologies, such as screen readers.
          */
-        enforceFocus: _react2['default'].PropTypes.bool,
+        enforceFocus: PropTypes.bool,
 
         /**
          * When `true` The modal will show itself.
          */
-        show: _react2['default'].PropTypes.bool,
+        show: PropTypes.bool,
 
         /**
          * A callback fired when the header closeButton or non-static backdrop is
          * clicked. Required if either are specified.
          */
-        onHide: _react2['default'].PropTypes.func,
+        onHide: PropTypes.func,
 
         /**
          * Callback fired before the Modal transitions in
          */
-        onEnter: _react2['default'].PropTypes.func,
+        onEnter: PropTypes.func,
 
         /**
          * Callback fired as the Modal begins to transition in
          */
-        onEntering: _react2['default'].PropTypes.func,
+        onEntering: PropTypes.func,
 
         /**
          * Callback fired after the Modal finishes transitioning in
          */
-        onEntered: _react2['default'].PropTypes.func,
+        onEntered: PropTypes.func,
 
         /**
          * Callback fired right before the Modal transitions out
          */
-        onExit: _react2['default'].PropTypes.func,
+        onExit: PropTypes.func,
 
         /**
          * Callback fired as the Modal begins to transition out
          */
-        onExiting: _react2['default'].PropTypes.func,
+        onExiting: PropTypes.func,
 
         /**
          * Callback fired after the Modal finishes transitioning out
          */
-        onExited: _react2['default'].PropTypes.func,
+        onExited: PropTypes.func,
 
         /**
          * @private
@@ -11093,8 +11093,8 @@
       });
 
       var childContextTypes = {
-        $bs_modal: _react2['default'].PropTypes.shape({
-          onHide: _react2['default'].PropTypes.func
+        $bs_modal: PropTypes.shape({
+          onHide: PropTypes.func
         })
       };
 
@@ -12501,7 +12501,7 @@
         /**
          * A css class to apply to the Modal dialog DOM node.
          */
-        dialogClassName: _react2['default'].PropTypes.string
+        dialogClassName: PropTypes.string
       };
 
       var ModalDialog = function (_React$Component) {
@@ -12686,19 +12686,19 @@
          * button. It is used for Assistive Technology when the label text is not
          * readable.
          */
-        'aria-label': _react2['default'].PropTypes.string,
+        'aria-label': PropTypes.string,
 
         /**
          * Specify whether the Component should contain a close button
          */
-        closeButton: _react2['default'].PropTypes.bool,
+        closeButton: PropTypes.bool,
 
         /**
          * A Callback fired when the close button is clicked. If used directly inside
          * a Modal component, the onHide will automatically be propagated up to the
          * parent Modal `onHide`.
          */
-        onHide: _react2['default'].PropTypes.func
+        onHide: PropTypes.func
       };
 
       var defaultProps = {
@@ -12707,8 +12707,8 @@
       };
 
       var contextTypes = {
-        $bs_modal: _react2['default'].PropTypes.shape({
-          onHide: _react2['default'].PropTypes.func
+        $bs_modal: PropTypes.shape({
+          onHide: PropTypes.func
         })
       };
 
@@ -12921,19 +12921,19 @@
          * Marks the NavItem with a matching `eventKey` as active. Has a
          * higher precedence over `activeHref`.
          */
-        activeKey: _react2['default'].PropTypes.any,
+        activeKey: PropTypes.any,
 
         /**
          * Marks the child NavItem with a matching `href` prop as active.
          */
-        activeHref: _react2['default'].PropTypes.string,
+        activeHref: PropTypes.string,
 
         /**
          * NavItems are be positioned vertically.
          */
-        stacked: _react2['default'].PropTypes.bool,
+        stacked: PropTypes.bool,
 
-        justified: (0, _all2['default'])(_react2['default'].PropTypes.bool, function (_ref) {
+        justified: (0, _all2['default'])(PropTypes.bool, function (_ref) {
           var justified = _ref.justified;
           var navbar = _ref.navbar;
           return justified && navbar ? Error('justified navbar `Nav`s are not supported') : null;
@@ -12949,7 +12949,7 @@
          * )
          * ```
          */
-        onSelect: _react2['default'].PropTypes.func,
+        onSelect: PropTypes.func,
 
         /**
          * ARIA role for the Nav, in the context of a TabContainer, the default will
@@ -12959,25 +12959,25 @@
          * the ARIA authoring practices for tabs:
          * https://www.w3.org/TR/2013/WD-wai-aria-practices-20130307/#tabpanel
          */
-        role: _react2['default'].PropTypes.string,
+        role: PropTypes.string,
 
         /**
          * Apply styling an alignment for use in a Navbar. This prop will be set
          * automatically when the Nav is used inside a Navbar.
          */
-        navbar: _react2['default'].PropTypes.bool,
+        navbar: PropTypes.bool,
 
         /**
          * Float the Nav to the right. When `navbar` is `true` the appropriate
          * contextual classes are added as well.
          */
-        pullRight: _react2['default'].PropTypes.bool,
+        pullRight: PropTypes.bool,
 
         /**
          * Float the Nav to the left. When `navbar` is `true` the appropriate
          * contextual classes are added as well.
          */
-        pullLeft: _react2['default'].PropTypes.bool
+        pullLeft: PropTypes.bool
       };
 
       var defaultProps = {
@@ -12988,15 +12988,15 @@
       };
 
       var contextTypes = {
-        $bs_navbar: _react2['default'].PropTypes.shape({
-          bsClass: _react2['default'].PropTypes.string
+        $bs_navbar: PropTypes.shape({
+          bsClass: PropTypes.string
         }),
 
-        $bs_tabContainer: _react2['default'].PropTypes.shape({
-          activeKey: _react2['default'].PropTypes.any,
-          onSelect: _react2['default'].PropTypes.func.isRequired,
-          getTabId: _react2['default'].PropTypes.func.isRequired,
-          getPaneId: _react2['default'].PropTypes.func.isRequired
+        $bs_tabContainer: PropTypes.shape({
+          activeKey: PropTypes.any,
+          onSelect: PropTypes.func.isRequired,
+          getTabId: PropTypes.func.isRequired,
+          getPaneId: PropTypes.func.isRequired
         })
       };
 
@@ -13324,25 +13324,25 @@
          * Create a fixed navbar along the top of the screen, that scrolls with the
          * page
          */
-        fixedTop: _react2['default'].PropTypes.bool,
+        fixedTop: PropTypes.bool,
         /**
          * Create a fixed navbar along the bottom of the screen, that scrolls with
          * the page
          */
-        fixedBottom: _react2['default'].PropTypes.bool,
+        fixedBottom: PropTypes.bool,
         /**
          * Create a full-width navbar that scrolls away with the page
          */
-        staticTop: _react2['default'].PropTypes.bool,
+        staticTop: PropTypes.bool,
         /**
          * An alternative dark visual style for the Navbar
          */
-        inverse: _react2['default'].PropTypes.bool,
+        inverse: PropTypes.bool,
         /**
          * Allow the Navbar to fluidly adjust to the page or container width, instead
          * of at the predefined screen breakpoints
          */
-        fluid: _react2['default'].PropTypes.bool,
+        fluid: PropTypes.bool,
 
         /**
          * Set a custom element for this component.
@@ -13355,16 +13355,16 @@
          *
          * @controllable navExpanded
          */
-        onToggle: _react2['default'].PropTypes.func,
+        onToggle: PropTypes.func,
 
         /**
          * Explicitly set the visiblity of the navbar body
          *
          * @controllable onToggle
          */
-        expanded: _react2['default'].PropTypes.bool,
+        expanded: PropTypes.bool,
 
-        role: _react2['default'].PropTypes.string
+        role: PropTypes.string
       }; // TODO: Remove this pragma once we upgrade eslint-config-airbnb.
       /* eslint-disable react/no-multi-comp */
 
@@ -13378,10 +13378,10 @@
       };
 
       var childContextTypes = {
-        $bs_navbar: _react.PropTypes.shape({
-          bsClass: _react.PropTypes.string,
-          expanded: _react.PropTypes.bool,
-          onToggle: _react.PropTypes.func.isRequired
+        $bs_navbar: PropTypes.shape({
+          bsClass: PropTypes.string,
+          expanded: PropTypes.bool,
+          onToggle: PropTypes.func.isRequired
         })
       };
 
@@ -13496,8 +13496,8 @@
 
         Wrapper.propTypes = {
           componentClass: _elementType2['default'],
-          pullRight: _react2['default'].PropTypes.bool,
-          pullLeft: _react2['default'].PropTypes.bool
+          pullRight: PropTypes.bool,
+          pullLeft: PropTypes.bool
         };
 
         Wrapper.defaultProps = {
@@ -13507,8 +13507,8 @@
         };
 
         Wrapper.contextTypes = {
-          $bs_navbar: _react.PropTypes.shape({
-            bsClass: _react.PropTypes.string
+          $bs_navbar: PropTypes.shape({
+            bsClass: PropTypes.string
           })
         };
 
@@ -13569,8 +13569,8 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var contextTypes = {
-        $bs_navbar: _react2['default'].PropTypes.shape({
-          bsClass: _react2['default'].PropTypes.string
+        $bs_navbar: PropTypes.shape({
+          bsClass: PropTypes.string
         })
       };
 
@@ -13654,9 +13654,9 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var contextTypes = {
-        $bs_navbar: _react.PropTypes.shape({
-          bsClass: _react.PropTypes.string,
-          expanded: _react.PropTypes.bool
+        $bs_navbar: PropTypes.shape({
+          bsClass: PropTypes.string,
+          expanded: PropTypes.bool
         })
       };
 
@@ -13737,8 +13737,8 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var contextTypes = {
-        $bs_navbar: _react2['default'].PropTypes.shape({
-          bsClass: _react2['default'].PropTypes.string
+        $bs_navbar: PropTypes.shape({
+          bsClass: PropTypes.string
         })
       };
 
@@ -13815,18 +13815,18 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        onClick: _react.PropTypes.func,
+        onClick: PropTypes.func,
         /**
          * The toggle content, if left empty it will render the default toggle (seen above).
          */
-        children: _react.PropTypes.node
+        children: PropTypes.node
       };
 
       var contextTypes = {
-        $bs_navbar: _react.PropTypes.shape({
-          bsClass: _react.PropTypes.string,
-          expanded: _react.PropTypes.bool,
-          onToggle: _react.PropTypes.func.isRequired
+        $bs_navbar: PropTypes.shape({
+          bsClass: PropTypes.string,
+          expanded: PropTypes.bool,
+          onToggle: PropTypes.func.isRequired
         })
       };
 
@@ -13934,15 +13934,15 @@
       var propTypes = (0, _extends3['default'])({}, _Dropdown2['default'].propTypes, {
 
         // Toggle props.
-        title: _react2['default'].PropTypes.node.isRequired,
-        noCaret: _react2['default'].PropTypes.bool,
-        active: _react2['default'].PropTypes.bool,
+        title: PropTypes.node.isRequired,
+        noCaret: PropTypes.bool,
+        active: PropTypes.bool,
 
         // Override generated docs from <Dropdown>.
         /**
          * @private
          */
-        children: _react2['default'].PropTypes.node
+        children: PropTypes.node
       });
 
       var NavDropdown = function (_React$Component) {
@@ -14052,13 +14052,13 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        active: _react2['default'].PropTypes.bool,
-        disabled: _react2['default'].PropTypes.bool,
-        role: _react2['default'].PropTypes.string,
-        href: _react2['default'].PropTypes.string,
-        onClick: _react2['default'].PropTypes.func,
-        onSelect: _react2['default'].PropTypes.func,
-        eventKey: _react2['default'].PropTypes.any
+        active: PropTypes.bool,
+        disabled: PropTypes.bool,
+        role: PropTypes.string,
+        href: PropTypes.string,
+        onClick: PropTypes.func,
+        onSelect: PropTypes.func,
+        eventKey: PropTypes.any
       };
 
       var defaultProps = {
@@ -14191,51 +14191,51 @@
         /**
          * Set the visibility of the Overlay
          */
-        show: _react2['default'].PropTypes.bool,
+        show: PropTypes.bool,
         /**
          * Specify whether the overlay should trigger onHide when the user clicks outside the overlay
          */
-        rootClose: _react2['default'].PropTypes.bool,
+        rootClose: PropTypes.bool,
         /**
          * A callback invoked by the overlay when it wishes to be hidden. Required if
          * `rootClose` is specified.
          */
-        onHide: _react2['default'].PropTypes.func,
+        onHide: PropTypes.func,
 
         /**
          * Use animation
          */
-        animation: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _elementType2['default']]),
+        animation: PropTypes.oneOfType([PropTypes.bool, _elementType2['default']]),
 
         /**
          * Callback fired before the Overlay transitions in
          */
-        onEnter: _react2['default'].PropTypes.func,
+        onEnter: PropTypes.func,
 
         /**
          * Callback fired as the Overlay begins to transition in
          */
-        onEntering: _react2['default'].PropTypes.func,
+        onEntering: PropTypes.func,
 
         /**
          * Callback fired after the Overlay finishes transitioning in
          */
-        onEntered: _react2['default'].PropTypes.func,
+        onEntered: PropTypes.func,
 
         /**
          * Callback fired right before the Overlay transitions out
          */
-        onExit: _react2['default'].PropTypes.func,
+        onExit: PropTypes.func,
 
         /**
          * Callback fired as the Overlay begins to transition out
          */
-        onExiting: _react2['default'].PropTypes.func,
+        onExiting: PropTypes.func,
 
         /**
          * Callback fired after the Overlay finishes transitioning out
          */
-        onExited: _react2['default'].PropTypes.func
+        onExited: PropTypes.func
       });
 
       var defaultProps = {
@@ -15103,74 +15103,74 @@
         return one === of;
       }
 
-      var triggerType = _react2['default'].PropTypes.oneOf(['click', 'hover', 'focus']);
+      var triggerType = PropTypes.oneOf(['click', 'hover', 'focus']);
 
       var propTypes = (0, _extends3['default'])({}, _Overlay2['default'].propTypes, {
 
         /**
          * Specify which action or actions trigger Overlay visibility
          */
-        trigger: _react2['default'].PropTypes.oneOfType([triggerType, _react2['default'].PropTypes.arrayOf(triggerType)]),
+        trigger: PropTypes.oneOfType([triggerType, PropTypes.arrayOf(triggerType)]),
 
         /**
          * A millisecond delay amount to show and hide the Overlay once triggered
          */
-        delay: _react2['default'].PropTypes.number,
+        delay: PropTypes.number,
         /**
          * A millisecond delay amount before showing the Overlay once triggered.
          */
-        delayShow: _react2['default'].PropTypes.number,
+        delayShow: PropTypes.number,
         /**
          * A millisecond delay amount before hiding the Overlay once triggered.
          */
-        delayHide: _react2['default'].PropTypes.number,
+        delayHide: PropTypes.number,
 
         // FIXME: This should be `defaultShow`.
         /**
          * The initial visibility state of the Overlay. For more nuanced visibility
          * control, consider using the Overlay component directly.
          */
-        defaultOverlayShown: _react2['default'].PropTypes.bool,
+        defaultOverlayShown: PropTypes.bool,
 
         /**
          * An element or text to overlay next to the target.
          */
-        overlay: _react2['default'].PropTypes.node.isRequired,
+        overlay: PropTypes.node.isRequired,
 
         /**
          * @private
          */
-        onBlur: _react2['default'].PropTypes.func,
+        onBlur: PropTypes.func,
         /**
          * @private
          */
-        onClick: _react2['default'].PropTypes.func,
+        onClick: PropTypes.func,
         /**
          * @private
          */
-        onFocus: _react2['default'].PropTypes.func,
+        onFocus: PropTypes.func,
         /**
          * @private
          */
-        onMouseOut: _react2['default'].PropTypes.func,
+        onMouseOut: PropTypes.func,
         /**
          * @private
          */
-        onMouseOver: _react2['default'].PropTypes.func,
+        onMouseOver: PropTypes.func,
 
         // Overridden props from `<Overlay>`.
         /**
          * @private
          */
-        target: _react2['default'].PropTypes.oneOf([null]),
+        target: PropTypes.oneOf([null]),
         /**
          * @private
          */
-        onHide: _react2['default'].PropTypes.oneOf([null]),
+        onHide: PropTypes.oneOf([null]),
         /**
          * @private
          */
-        show: _react2['default'].PropTypes.oneOf([null])
+        show: PropTypes.oneOf([null])
       });
 
       var defaultProps = {
@@ -15535,12 +15535,12 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        disabled: _react2['default'].PropTypes.bool,
-        previous: _react2['default'].PropTypes.bool,
-        next: _react2['default'].PropTypes.bool,
-        onClick: _react2['default'].PropTypes.func,
-        onSelect: _react2['default'].PropTypes.func,
-        eventKey: _react2['default'].PropTypes.any
+        disabled: PropTypes.bool,
+        previous: PropTypes.bool,
+        next: PropTypes.bool,
+        onClick: PropTypes.func,
+        onSelect: PropTypes.func,
+        eventKey: PropTypes.any
       };
 
       var defaultProps = {
@@ -15761,7 +15761,7 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        onSelect: _react2['default'].PropTypes.func
+        onSelect: PropTypes.func
       };
 
       var Pager = function (_React$Component) {
@@ -15859,46 +15859,46 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        activePage: _react2['default'].PropTypes.number,
-        items: _react2['default'].PropTypes.number,
-        maxButtons: _react2['default'].PropTypes.number,
+        activePage: PropTypes.number,
+        items: PropTypes.number,
+        maxButtons: PropTypes.number,
 
         /**
          * When `true`, will display the first and the last button page
          */
-        boundaryLinks: _react2['default'].PropTypes.bool,
+        boundaryLinks: PropTypes.bool,
 
         /**
          * When `true`, will display the default node value ('&hellip;').
          * Otherwise, will display provided node (when specified).
          */
-        ellipsis: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+        ellipsis: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 
         /**
          * When `true`, will display the default node value ('&laquo;').
          * Otherwise, will display provided node (when specified).
          */
-        first: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+        first: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 
         /**
          * When `true`, will display the default node value ('&raquo;').
          * Otherwise, will display provided node (when specified).
          */
-        last: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+        last: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 
         /**
          * When `true`, will display the default node value ('&lsaquo;').
          * Otherwise, will display provided node (when specified).
          */
-        prev: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+        prev: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 
         /**
          * When `true`, will display the default node value ('&rsaquo;').
          * Otherwise, will display provided node (when specified).
          */
-        next: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.bool, _react2['default'].PropTypes.node]),
+        next: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 
-        onSelect: _react2['default'].PropTypes.func,
+        onSelect: PropTypes.func,
 
         /**
          * You can use a custom element for the buttons
@@ -16172,12 +16172,12 @@
 
       var propTypes = {
         componentClass: _elementType2['default'],
-        className: _react2['default'].PropTypes.string,
-        eventKey: _react2['default'].PropTypes.any,
-        onSelect: _react2['default'].PropTypes.func,
-        disabled: _react2['default'].PropTypes.bool,
-        active: _react2['default'].PropTypes.bool,
-        onClick: _react2['default'].PropTypes.func
+        className: PropTypes.string,
+        eventKey: PropTypes.any,
+        onSelect: PropTypes.func,
+        disabled: PropTypes.bool,
+        active: PropTypes.bool,
+        onClick: PropTypes.func
       };
 
       var defaultProps = {
@@ -16307,24 +16307,24 @@
       // TODO: Use uncontrollable.
 
       var propTypes = {
-        collapsible: _react2['default'].PropTypes.bool,
-        onSelect: _react2['default'].PropTypes.func,
-        header: _react2['default'].PropTypes.node,
-        id: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number]),
-        footer: _react2['default'].PropTypes.node,
-        defaultExpanded: _react2['default'].PropTypes.bool,
-        expanded: _react2['default'].PropTypes.bool,
-        eventKey: _react2['default'].PropTypes.any,
-        headerRole: _react2['default'].PropTypes.string,
-        panelRole: _react2['default'].PropTypes.string,
+        collapsible: PropTypes.bool,
+        onSelect: PropTypes.func,
+        header: PropTypes.node,
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        footer: PropTypes.node,
+        defaultExpanded: PropTypes.bool,
+        expanded: PropTypes.bool,
+        eventKey: PropTypes.any,
+        headerRole: PropTypes.string,
+        panelRole: PropTypes.string,
 
         // From Collapse.
-        onEnter: _react2['default'].PropTypes.func,
-        onEntering: _react2['default'].PropTypes.func,
-        onEntered: _react2['default'].PropTypes.func,
-        onExit: _react2['default'].PropTypes.func,
-        onExiting: _react2['default'].PropTypes.func,
-        onExited: _react2['default'].PropTypes.func
+        onEnter: PropTypes.func,
+        onEntering: PropTypes.func,
+        onEntered: PropTypes.func,
+        onExit: PropTypes.func,
+        onExiting: PropTypes.func,
+        onExited: PropTypes.func
       };
 
       var defaultProps = {
@@ -16574,35 +16574,35 @@
          * @type {string}
          * @required
          */
-        id: (0, _isRequiredForA11y2['default'])(_react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number])),
+        id: (0, _isRequiredForA11y2['default'])(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
 
         /**
          * Sets the direction the Popover is positioned towards.
          */
-        placement: _react2['default'].PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+        placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
 
         /**
          * The "top" position value for the Popover.
          */
-        positionTop: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        positionTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /**
          * The "left" position value for the Popover.
          */
-        positionLeft: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        positionLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
         /**
          * The "top" position value for the Popover arrow.
          */
-        arrowOffsetTop: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        arrowOffsetTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /**
          * The "left" position value for the Popover arrow.
          */
-        arrowOffsetLeft: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        arrowOffsetLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
         /**
          * Title content
          */
-        title: _react2['default'].PropTypes.node
+        title: PropTypes.node
       };
 
       var defaultProps = {
@@ -16762,19 +16762,19 @@
       }
 
       var propTypes = {
-        min: _react.PropTypes.number,
-        now: _react.PropTypes.number,
-        max: _react.PropTypes.number,
-        label: _react.PropTypes.node,
-        srOnly: _react.PropTypes.bool,
-        striped: _react.PropTypes.bool,
-        active: _react.PropTypes.bool,
+        min: PropTypes.number,
+        now: PropTypes.number,
+        max: PropTypes.number,
+        label: PropTypes.node,
+        srOnly: PropTypes.bool,
+        striped: PropTypes.bool,
+        active: PropTypes.bool,
         children: onlyProgressBar,
 
         /**
          * @private
          */
-        isChild: _react.PropTypes.bool
+        isChild: PropTypes.bool
       };
 
       var defaultProps = {
@@ -16932,12 +16932,12 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        inline: _react2['default'].PropTypes.bool,
-        disabled: _react2['default'].PropTypes.bool,
+        inline: PropTypes.bool,
+        disabled: PropTypes.bool,
         /**
          * Only valid if `inline` is not set.
          */
-        validationState: _react2['default'].PropTypes.oneOf(['success', 'warning', 'error']),
+        validationState: PropTypes.oneOf(['success', 'warning', 'error']),
         /**
          * Attaches a ref to the `<input>` element. Only functions can be used here.
          *
@@ -16945,7 +16945,7 @@
          * <Radio inputRef={ref => { this.input = ref; }} />
          * ```
          */
-        inputRef: _react2['default'].PropTypes.func
+        inputRef: PropTypes.func
       };
 
       var defaultProps = {
@@ -17079,15 +17079,15 @@
         /**
          * This component requires a single child element
          */
-        children: _react.PropTypes.element.isRequired,
+        children: PropTypes.element.isRequired,
         /**
          * 16by9 aspect ratio
          */
-        a16by9: _react.PropTypes.bool,
+        a16by9: PropTypes.bool,
         /**
          * 4by3 aspect ratio
          */
-        a4by3: _react.PropTypes.bool
+        a4by3: PropTypes.bool
       };
 
       var defaultProps = {
@@ -17283,24 +17283,24 @@
       var propTypes = (0, _extends3['default'])({}, _Dropdown2['default'].propTypes, {
 
         // Toggle props.
-        bsStyle: _react2['default'].PropTypes.string,
-        bsSize: _react2['default'].PropTypes.string,
-        href: _react2['default'].PropTypes.string,
-        onClick: _react2['default'].PropTypes.func,
+        bsStyle: PropTypes.string,
+        bsSize: PropTypes.string,
+        href: PropTypes.string,
+        onClick: PropTypes.func,
         /**
          * The content of the split button.
          */
-        title: _react2['default'].PropTypes.node.isRequired,
+        title: PropTypes.node.isRequired,
         /**
          * Accessible label for the toggle; the value of `title` if not specified.
          */
-        toggleLabel: _react2['default'].PropTypes.string,
+        toggleLabel: PropTypes.string,
 
         // Override generated docs from <Dropdown>.
         /**
          * @private
          */
-        children: _react2['default'].PropTypes.node
+        children: PropTypes.node
       });
 
       var SplitButton = function (_React$Component) {
@@ -17465,14 +17465,14 @@
 
       var propTypes = (0, _extends3['default'])({}, _TabPane2['default'].propTypes, {
 
-        disabled: _react2['default'].PropTypes.bool,
+        disabled: PropTypes.bool,
 
-        title: _react2['default'].PropTypes.node,
+        title: PropTypes.node,
 
         /**
          * tabClassName is used as className for the associated NavItem
          */
-        tabClassName: _react2['default'].PropTypes.string
+        tabClassName: PropTypes.string
       });
 
       var Tab = function (_React$Component) {
@@ -17543,7 +17543,7 @@
       var TAB = 'tab';
       var PANE = 'pane';
 
-      var idPropType = _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]);
+      var idPropType = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
 
       var propTypes = {
         /**
@@ -17580,29 +17580,29 @@
          *
          * @defaultValue (eventKey, type) => `${this.props.id}-${type}-${key}`
          */
-        generateChildId: _react.PropTypes.func,
+        generateChildId: PropTypes.func,
 
         /**
          * A callback fired when a tab is selected.
          *
          * @controllable activeKey
          */
-        onSelect: _react.PropTypes.func,
+        onSelect: PropTypes.func,
 
         /**
          * The `eventKey` of the currently active tab.
          *
          * @controllable onSelect
          */
-        activeKey: _react.PropTypes.any
+        activeKey: PropTypes.any
       };
 
       var childContextTypes = {
-        $bs_tabContainer: _react2['default'].PropTypes.shape({
-          activeKey: _react.PropTypes.any,
-          onSelect: _react.PropTypes.func.isRequired,
-          getTabId: _react.PropTypes.func.isRequired,
-          getPaneId: _react.PropTypes.func.isRequired
+        $bs_tabContainer: PropTypes.shape({
+          activeKey: PropTypes.any,
+          onSelect: PropTypes.func.isRequired,
+          getTabId: PropTypes.func.isRequired,
+          getPaneId: PropTypes.func.isRequired
         })
       };
 
@@ -17714,12 +17714,12 @@
          * `false` to disable, `true` to enable the default `<Fade>` animation or any
          * `<Transition>` component.
          */
-        animation: _react.PropTypes.oneOfType([_react.PropTypes.bool, _elementType2['default']]),
+        animation: PropTypes.oneOfType([PropTypes.bool, _elementType2['default']]),
 
         /**
          * Unmount tabs (remove it from the DOM) when they are no longer visible
          */
-        unmountOnExit: _react.PropTypes.bool
+        unmountOnExit: PropTypes.bool
       };
 
       var defaultProps = {
@@ -17729,20 +17729,20 @@
       };
 
       var contextTypes = {
-        $bs_tabContainer: _react.PropTypes.shape({
-          activeKey: _react.PropTypes.any
+        $bs_tabContainer: PropTypes.shape({
+          activeKey: PropTypes.any
         })
       };
 
       var childContextTypes = {
-        $bs_tabContent: _react.PropTypes.shape({
-          bsClass: _react.PropTypes.string,
-          animation: _react.PropTypes.oneOfType([_react.PropTypes.bool, _elementType2['default']]),
-          activeKey: _react.PropTypes.any,
-          unmountOnExit: _react.PropTypes.bool,
-          onPaneEnter: _react.PropTypes.func.isRequired,
-          onPaneExited: _react.PropTypes.func.isRequired,
-          exiting: _react.PropTypes.bool.isRequired
+        $bs_tabContent: PropTypes.shape({
+          bsClass: PropTypes.string,
+          animation: PropTypes.oneOfType([PropTypes.bool, _elementType2['default']]),
+          activeKey: PropTypes.any,
+          unmountOnExit: PropTypes.bool,
+          onPaneEnter: PropTypes.func.isRequired,
+          onPaneExited: PropTypes.func.isRequired,
+          exiting: PropTypes.bool.isRequired
         })
       };
 
@@ -17934,77 +17934,77 @@
         /**
          * Uniquely identify the `<TabPane>` among its siblings.
          */
-        eventKey: _react.PropTypes.any,
+        eventKey: PropTypes.any,
 
         /**
          * Use animation when showing or hiding `<TabPane>`s. Use `false` to disable,
          * `true` to enable the default `<Fade>` animation or any `<Transition>`
          * component.
          */
-        animation: _react.PropTypes.oneOfType([_react.PropTypes.bool, _elementType2['default']]),
+        animation: PropTypes.oneOfType([PropTypes.bool, _elementType2['default']]),
 
         /** @private **/
-        id: _react.PropTypes.string,
+        id: PropTypes.string,
 
         /** @private **/
-        'aria-labelledby': _react.PropTypes.string,
+        'aria-labelledby': PropTypes.string,
 
         /**
          * If not explicitly specified and rendered in the context of a
          * `<TabContent>`, the `bsClass` of the `<TabContent>` suffixed by `-pane`.
          * If otherwise not explicitly specified, `tab-pane`.
          */
-        bsClass: _react2['default'].PropTypes.string,
+        bsClass: PropTypes.string,
 
         /**
          * Transition onEnter callback when animation is not `false`
          */
-        onEnter: _react.PropTypes.func,
+        onEnter: PropTypes.func,
 
         /**
          * Transition onEntering callback when animation is not `false`
          */
-        onEntering: _react.PropTypes.func,
+        onEntering: PropTypes.func,
 
         /**
          * Transition onEntered callback when animation is not `false`
          */
-        onEntered: _react.PropTypes.func,
+        onEntered: PropTypes.func,
 
         /**
          * Transition onExit callback when animation is not `false`
          */
-        onExit: _react.PropTypes.func,
+        onExit: PropTypes.func,
 
         /**
          * Transition onExiting callback when animation is not `false`
          */
-        onExiting: _react.PropTypes.func,
+        onExiting: PropTypes.func,
 
         /**
          * Transition onExited callback when animation is not `false`
          */
-        onExited: _react.PropTypes.func,
+        onExited: PropTypes.func,
 
         /**
          * Unmount the tab (remove it from the DOM) when it is no longer visible
          */
-        unmountOnExit: _react.PropTypes.bool
+        unmountOnExit: PropTypes.bool
       };
 
       var contextTypes = {
-        $bs_tabContainer: _react.PropTypes.shape({
-          getId: _react.PropTypes.func,
-          unmountOnExit: _react.PropTypes.bool
+        $bs_tabContainer: PropTypes.shape({
+          getId: PropTypes.func,
+          unmountOnExit: PropTypes.bool
         }),
-        $bs_tabContent: _react.PropTypes.shape({
-          bsClass: _react.PropTypes.string,
-          animation: _react.PropTypes.oneOfType([_react.PropTypes.bool, _elementType2['default']]),
-          activeKey: _react.PropTypes.any,
-          unmountOnExit: _react.PropTypes.bool,
-          onPaneEnter: _react.PropTypes.func.isRequired,
-          onPaneExited: _react.PropTypes.func.isRequired,
-          exiting: _react.PropTypes.bool.isRequired
+        $bs_tabContent: PropTypes.shape({
+          bsClass: PropTypes.string,
+          animation: PropTypes.oneOfType([PropTypes.bool, _elementType2['default']]),
+          activeKey: PropTypes.any,
+          unmountOnExit: PropTypes.bool,
+          onPaneEnter: PropTypes.func.isRequired,
+          onPaneExited: PropTypes.func.isRequired,
+          exiting: PropTypes.bool.isRequired
         })
       };
 
@@ -18013,7 +18013,7 @@
        * conflict with the top level one.
        */
       var childContextTypes = {
-        $bs_tabContainer: _react.PropTypes.oneOf([null])
+        $bs_tabContainer: PropTypes.oneOf([null])
       };
 
       var TabPane = function (_React$Component) {
@@ -18229,11 +18229,11 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        striped: _react2['default'].PropTypes.bool,
-        bordered: _react2['default'].PropTypes.bool,
-        condensed: _react2['default'].PropTypes.bool,
-        hover: _react2['default'].PropTypes.bool,
-        responsive: _react2['default'].PropTypes.bool
+        striped: PropTypes.bool,
+        bordered: PropTypes.bool,
+        condensed: PropTypes.bool,
+        hover: PropTypes.bool,
+        responsive: PropTypes.bool
       };
 
       var defaultProps = {
@@ -18368,16 +18368,16 @@
          *
          * @controllable onSelect
          */
-        activeKey: _react2['default'].PropTypes.any,
+        activeKey: PropTypes.any,
 
         /**
          * Navigation style
          */
-        bsStyle: _react2['default'].PropTypes.oneOf(['tabs', 'pills']),
+        bsStyle: PropTypes.oneOf(['tabs', 'pills']),
 
-        animation: _react2['default'].PropTypes.bool,
+        animation: PropTypes.bool,
 
-        id: (0, _isRequiredForA11y2['default'])(_react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number])),
+        id: (0, _isRequiredForA11y2['default'])(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
 
         /**
          * Callback fired when a Tab is selected.
@@ -18391,12 +18391,12 @@
          *
          * @controllable activeKey
          */
-        onSelect: _react2['default'].PropTypes.func,
+        onSelect: PropTypes.func,
 
         /**
          * Unmount tabs (remove it from the DOM) when it is no longer visible
          */
-        unmountOnExit: _react2['default'].PropTypes.bool
+        unmountOnExit: PropTypes.bool
       };
 
       var defaultProps = {
@@ -18549,9 +18549,9 @@
       function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
       var propTypes = {
-        src: _react2['default'].PropTypes.string,
-        alt: _react2['default'].PropTypes.string,
-        href: _react2['default'].PropTypes.string
+        src: PropTypes.string,
+        alt: PropTypes.string,
+        href: PropTypes.string
       };
 
       var Thumbnail = function (_React$Component) {
@@ -18651,30 +18651,30 @@
          * @type {string|number}
          * @required
          */
-        id: (0, _isRequiredForA11y2['default'])(_react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.string, _react2['default'].PropTypes.number])),
+        id: (0, _isRequiredForA11y2['default'])(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
 
         /**
          * Sets the direction the Tooltip is positioned towards.
          */
-        placement: _react2['default'].PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+        placement: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
 
         /**
          * The "top" position value for the Tooltip.
          */
-        positionTop: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        positionTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /**
          * The "left" position value for the Tooltip.
          */
-        positionLeft: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        positionLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
         /**
          * The "top" position value for the Tooltip arrow.
          */
-        arrowOffsetTop: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string]),
+        arrowOffsetTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /**
          * The "left" position value for the Tooltip arrow.
          */
-        arrowOffsetLeft: _react2['default'].PropTypes.oneOfType([_react2['default'].PropTypes.number, _react2['default'].PropTypes.string])
+        arrowOffsetLeft: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
       };
 
       var defaultProps = {
